@@ -24,7 +24,7 @@
     if (!$link) {
         die('No se pudo conectar: ' . mysqli_connect_error());
     }
-
+    echo 'hola ' . $apellidos;
     $query = "INSERT INTO personas (nombre, apellidos, direccion, telefono, edad, altura, peso)
     VALUES ('$nombre', '$apellidos', '$direccion', '$telefono', $edad, $altura, $peso)";
 
@@ -35,6 +35,7 @@
     }
     
     mysqli_close($link);
+    echo 'hola' . $telefono;
     ?>
 </body>
 
