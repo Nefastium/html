@@ -10,7 +10,8 @@
 <body>
     <p>hola</p>
     <?php
-    $link = mysqli_connect('localhost', 'stefano', 'Elmaspapu1!', 'datos_personales');
+        echo 'hola' . $nombre;
+    /*$link = mysqli_connect('localhost', 'stefano', 'Elmaspapu1!', 'datos_personales');
     if (!$link) {
         die('No se pudo conectar: ' . mysqli_connect_error());
     }
@@ -21,9 +22,7 @@
     $telefono = $_POST['telefono'];
     $edad = $_POST['edad'];
     $altura = $_POST['altura'];
-    $peso = $_POST['peso'];
-
-    echo 'hola' . $nombre;
+    $peso = $_POST['peso'];*/
 
     /*$query = "INSERT INTO personas (nombre, apellidos, direccion, telefono, edad, altura, peso)
     VALUES ('$nombre', '$apellidos', '$direccion', '$telefono', $edad, $altura, $peso)";
@@ -34,7 +33,6 @@
         echo "Error al insertar el registro: " . mysqli_error($link);
     }
     mysqli_close($link);*/
-
     ?>
 
 </body>
