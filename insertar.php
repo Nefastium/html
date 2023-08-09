@@ -22,6 +22,8 @@
     $altura = $_POST['altura'];
     $peso = $_POST['peso'];
 
+    echo $nombre;
+
     $query = "INSERT INTO personas (nombre, apellidos, direccion, telefono, edad, altura, peso)
     VALUES ('$nombre', '$apellidos', '$direccion', '$telefono', $edad, $altura, $peso)";
 
