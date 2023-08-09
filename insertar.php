@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mostrar Datos</title>
 </head>
 
 <body>
+    <p>hola</p>
     <?php
     $link = mysqli_connect('localhost', 'stefano', 'Elmaspapu1!', 'datos_personales');
     if (!$link) {
