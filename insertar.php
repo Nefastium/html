@@ -1,25 +1,39 @@
-<?php
-$link = mysqli_connect('localhost', 'stefano', 'Elmaspapu1!', 'datos_personales');
-if (!$link) {
-    die('No se pudo conectar: ' . mysqli_connect_error());
-}
+<!DOCTYPE html>
+<html lang="en">
 
-$nombre = $_POST['nombre'];
-$apellidos = $_POST['apellidos'];
-$direccion = $_POST['direccion'];
-$telefono = $_POST['telefono'];
-$edad = $_POST['edad'];
-$altura = $_POST['altura'];
-$peso = $_POST['peso'];
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 
-$query = "INSERT INTO personas (nombre, apellidos, direccion, telefono, edad, altura, peso) 
-          VALUES ('$nombre', '$apellidos', '$direccion', '$telefono', $edad, $altura, $peso)";
+<body>
+    <?php
+    $link = mysqli_connect('localhost', 'stefano', 'Elmaspapu1!', 'datos_personales');
+    if (!$link) {
+        die('No se pudo conectar: ' . mysqli_connect_error());
+    }
 
-if (mysqli_query($link, $query)) {
-    echo "Registro insertado correctamente.";
-} else {
-    echo "Error al insertar el registro: " . mysqli_error($link);
-}
+    $nombre = $_POST['nombre'];
+    $apellidos = $_POST['apellidos'];
+    $direccion = $_POST['direccion'];
+    $telefono = $_POST['telefono'];
+    $edad = $_POST['edad'];
+    $altura = $_POST['altura'];
+    $peso = $_POST['peso'];
 
-mysqli_close($link);
-?>
+    $query = "INSERT INTO personas (nombre, apellidos, direccion, telefono, edad, altura, peso)
+    VALUES ('$nombre', '$apellidos', '$direccion', '$telefono', $edad, $altura, $peso)";
+
+    if (mysqli_query($link, $query)) {
+        echo "Registro insertado correctamente.";
+    } else {
+        echo "Error al insertar el registro: " . mysqli_error($link);
+    }
+
+    mysqli_close($link);
+    ?>
+
+</body>
+
+</html>
