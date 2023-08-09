@@ -25,7 +25,7 @@
 
     echo $nombre;
 
-    $query = "INSERT INTO personas (nombre, apellidos, direccion, telefono, edad, altura, peso)
+    /*$query = "INSERT INTO personas (nombre, apellidos, direccion, telefono, edad, altura, peso)
     VALUES ('$nombre', '$apellidos', '$direccion', '$telefono', $edad, $altura, $peso)";
 
     if (mysqli_query($link, $query)) {
@@ -33,8 +33,8 @@
     } else {
         echo "Error al insertar el registro: " . mysqli_error($link);
     }
+    mysqli_close($link);*/
 
-    mysqli_close($link);
     ?>
 
 </body>
