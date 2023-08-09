@@ -18,26 +18,27 @@
     $altura = $_POST['altura'];
     $peso = $_POST['peso'];
 
-    echo 'Hola ' . $nombre;  // Se mueve el echo aquí para mostrar el nombre antes de la conexión
+    echo '<div>Hola ' . $nombre . '</div>';  // Se utiliza un div para encapsular el mensaje
 
     $link = mysqli_connect('localhost', 'stefano', 'Elmaspapu1!', 'datos_personales');
     if (!$link) {
         die('No se pudo conectar: ' . mysqli_connect_error());
     }
-    echo 'hola ' . $apellidos;
+
     $query = "INSERT INTO personas (nombre, apellidos, direccion, telefono, edad, altura, peso)
     VALUES ('$nombre', '$apellidos', '$direccion', '$telefono', $edad, $altura, $peso)";
 
     if (mysqli_query($link, $query)) {
-        echo " Registro insertado correctamente.";
+        echo '<div>Registro insertado correctamente.</div>'; // Utilizamos un div aquí también
     } else {
-        echo " Error al insertar el registro: " . mysqli_error($link);
+        echo '<div>Error al insertar el registro: ' . mysqli_error($link) . '</div>'; // Y aquí
     }
     
     mysqli_close($link);
-    echo 'hola' . $telefono;
+    echo '<div>hola ' . $telefono . '</div>'; // Y aquí
     ?>
 </body>
+
 
 
 </html>
